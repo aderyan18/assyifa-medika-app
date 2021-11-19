@@ -4,11 +4,13 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs";
 import Icon from "react-native-vector-icons/Ionicons";
-
 import home from "../View/home/index";
 import profile from "../View/profile/index";
 import aboutUs from "../View/aboutUs/index";
 import obat from "../View/obat/index";
+import splashScreen from "../View/splash/splashScreen";
+import login from "../auth/login/index";
+import register from "../auth/register/index";
 
 const Tab = createMaterialBottomTabNavigator();
 const Stack = createStackNavigator();
@@ -81,11 +83,11 @@ const NavigationRoutes = () => {
         initialRouteName="splashScreen"
         screenOptions={{ headerShown: false }}
       >
-        {/* <Stack.Screen name="splashScreen" component={splashScreen} /> */}
-        {/* <Stack.Screen name="login" component={login} /> */}
+        <Stack.Screen name="splashScreen" component={splashScreen} />
+        <Stack.Screen name="login" component={login} />
         {/* <Stack.Screen name="profile" component={profile} /> */}
         <Stack.Screen name="home" component={BottomTab} />
-        {/* <Stack.Screen name="register" component={register} /> */}
+        <Stack.Screen name="register" component={register} />
       </Stack.Navigator>
     </NavigationContainer>
   );

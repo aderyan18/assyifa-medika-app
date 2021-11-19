@@ -1,5 +1,5 @@
-import React from "react";
-import { View, Text, Image } from "react-native";
+import React, { useState } from "react";
+import { View, Text, Image, TouchableOpacity } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { COLOR } from "../../../styles/color";
 import {
@@ -10,8 +10,8 @@ import {
   Searchbar,
   IconButton,
 } from "react-native-paper";
-import { ScrollView, TouchableOpacity } from "react-native-gesture-handler";
-import { Icon } from "react-native-vector-icons/FontAwesome";
+import { ScrollView } from "react-native-gesture-handler";
+import Icon from "react-native-vector-icons/MaterialIcons";
 import {
   heightPercentageToDP as hp,
   widthPercentageToDP as wp,
@@ -19,9 +19,11 @@ import {
 
 export default function DaftarObat() {
   const obat = [];
-  for (let a = 1; a < 2; a++) {
+  for (let a = 1; a < 7; a++) {
     obat[a] = a + 1;
   }
+
+  const [jumlah, setJumlah] = useState(0);
 
   return (
     <View
@@ -64,67 +66,105 @@ export default function DaftarObat() {
                     width: wp(100),
                     height: hp(20),
                     backgroundColor: "#ADB3BC",
-                    padding: wp(5),
+                    // padding: wp(5),
                     flexDirection: "row",
-                    // marginBottom: hp(10),
+                    marginBottom: hp(3),
                     // alignItems: "center",
                   }}
                 >
                   <Image
-                    source={require("../../../assets/antalgin.jpg")}
+                    source={require("../../Assets/Icon/antalgin.jpg")}
                     style={{
-                      height: hp(15),
-                      width: wp(30),
+                      height: hp(20),
+                      width: wp(35),
                     }}
                   />
                   <View
                     style={{
                       alignItems: "flex-start",
                       justifyContent: "flex-start",
-                      width: wp(50),
-                      height: hp(15),
-                      backgroundColor: "red",
-                      padding: wp(3),
+                      width: wp(55),
+                      height: hp(20),
+                      backgroundColor: "#D1D5DB",
+                      padding: wp(1),
                     }}
                   >
-                    <Text style={{ fontSize: wp(5) }}>Antalgin</Text>
+                    <View>
+                      <Text style={{ fontSize: wp(4.5) }}>Obat Antalgin</Text>
+                    </View>
+                    <Text style={{ fontSize: wp(3.5) }}>Kimia Farma</Text>
+                    <View></View>
                     <View
                       style={{
-                        backgroundColor: "blue",
-                        width: wp(45),
+                        backgroundColor: "#D1D5DB",
+                        width: wp(55),
                         height: hp(8),
                         alignSelf: "flex-end",
                         flexDirection: "row",
                         paddingTop: wp(3),
+                        justifyContent: "space-around",
+                        marginTop: hp(3),
+                        left: wp(1),
                       }}
                     >
-                      <TouchableOpacity
-                        style={{
-                          backgroundColor: "green",
-                          width: wp(10),
-                          height: hp(5),
-                          borderRadius: hp(10),
-                        }}
-                      ></TouchableOpacity>
+                      <Text style={{ fontSize: wp(5) }}>50 pcs</Text>
                       <View
                         style={{
-                          backgroundColor: "white",
-                          width: wp(10),
-                          height: hp(5),
+                          backgroundColor: "#F0F3F6",
+                          width: wp(23),
+                          height: hp(4),
                           alignItems: "center",
                           justifyContent: "center",
+                          flexDirection: "row",
+                          borderRadius: hp(10),
+                          elevation: 5,
                         }}
                       >
-                        <Text style={{ fontSize: hp(3) }}>1</Text>
+                        <TouchableOpacity
+                          onPress={() => {
+                            if (jumlah > 0) {
+                              setJumlah(jumlah - 1);
+                            }
+                          }}
+                          style={{
+                            backgroundColor: "#CBDFE1",
+                            width: wp(10),
+                            height: hp(5),
+                            borderRadius: hp(10),
+                            alignItems: "center",
+                            justifyContent: "center",
+                          }}
+                        >
+                          <Text style={{ fontWeight: "bold", fontSize: hp(4) }}>
+                            -
+                          </Text>
+                        </TouchableOpacity>
+                        <Text style={{ fontSize: hp(2.5), fontWeight: "bold" }}>
+                          {jumlah}
+                        </Text>
+                        <TouchableOpacity
+                          onPress={() => setJumlah(jumlah + 1)}
+                          style={{
+                            backgroundColor: "#37B9C5",
+                            width: wp(10),
+                            height: hp(5),
+                            borderRadius: hp(10),
+                            alignItems: "center",
+                            justifyContent: "center",
+                          }}
+                        >
+                          <Text style={{ fontWeight: "bold", fontSize: hp(4) }}>
+                            +
+                          </Text>
+                        </TouchableOpacity>
                       </View>
-                      <TouchableOpacity
-                        style={{
-                          backgroundColor: "aqua",
-                          width: wp(10),
-                          height: hp(5),
-                          borderRadius: hp(10),
-                        }}
-                      ></TouchableOpacity>
+                      <TouchableOpacity>
+                        <Icon
+                          name="shopping-cart"
+                          size={hp(4.5)}
+                          color={"#000000"}
+                        />
+                      </TouchableOpacity>
                     </View>
                   </View>
                 </View>
