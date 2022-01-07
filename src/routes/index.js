@@ -59,7 +59,7 @@ function BottomTab() {
           ),
         }}
       />
-      <Tab.Screen
+      {/* <Tab.Screen
         name="User"
         component={profile}
         options={{
@@ -71,7 +71,7 @@ function BottomTab() {
             />
           ),
         }}
-      />
+      /> */}
     </Tab.Navigator>
   );
 }
@@ -84,10 +84,10 @@ const NavigationRoutes = () => {
         screenOptions={{ headerShown: false }}
       >
         <Stack.Screen name="splashScreen" component={splashScreen} />
-        <Stack.Screen name="login" component={login} />
-        {/* <Stack.Screen name="profile" component={profile} /> */}
         <Stack.Screen name="home" component={BottomTab} />
+        <Stack.Screen name="profile" component={profile} />
         <Stack.Screen name="register" component={register} />
+        <Stack.Screen name="login" component={login} />
       </Stack.Navigator>
     </NavigationContainer>
   );

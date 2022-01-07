@@ -25,27 +25,28 @@ class splashScreen extends Component {
 
   componentDidMount() {
     setTimeout(() => {
-      this.props.navigation.dispatch(StackActions.replace("login"));
+      this.props.navigation.dispatch(StackActions.replace("home"));
     }, 3000);
   }
 
   render() {
     return (
       <View style={styles.container}>
-        <Image
-          style={styles.tinyLogo}
-          source={require("../../View/Assets/Icon/splash.png")}
-        />
         <Text
           style={{
             fontSize: hp(4),
             fontWeight: "bold",
             textAlign: "center",
-            marginTop: hp(23),
+            fontStyle: "italic",
+            bottom: hp(15),
           }}
         >
-          Pharmacy App
+          Welcome
         </Text>
+        <Image
+          style={styles.tinyLogo}
+          source={require("../../View/Assets/Icon/splash.png")}
+        />
       </View>
     );
   }
@@ -61,12 +62,9 @@ const styles = StyleSheet.create({
   },
   tinyLogo: {
     backgroundColor: "#fff",
-    position: "absolute",
-    // marginTop: 358,
-    // marginLeft: 139,
+    height: hp(30),
+    width: wp(60),
     alignSelf: "center",
-    // width: 96,
-    // height: 96,
   },
 });
 
