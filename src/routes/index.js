@@ -11,6 +11,7 @@ import obat from "../View/obat/index";
 import splashScreen from "../View/splash/splashScreen";
 import login from "../auth/login/index";
 import register from "../auth/register/index";
+import DetailCovid from "../DetailCovid";
 
 const Tab = createMaterialBottomTabNavigator();
 const Stack = createStackNavigator();
@@ -88,6 +89,7 @@ const NavigationRoutes = () => {
         <Stack.Screen name="profile" component={profile} />
         <Stack.Screen name="register" component={register} />
         <Stack.Screen name="login" component={login} />
+        <Stack.Screen name="DetailCovid" component={DetailCovid} />
       </Stack.Navigator>
     </NavigationContainer>
   );
