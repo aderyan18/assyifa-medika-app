@@ -25,7 +25,10 @@ export default function home() {
         }}
       >
         <TouchableOpacity>
-          <Icon name="person-circle-outline" size={hp(5)} color={"#fff"} />
+          <Image
+            source={require("../../assets/icon.png")}
+            style={{ width: wp(28), height: hp(5), borderRadius: hp(5) }}
+          />
         </TouchableOpacity>
         <Text
           style={{ fontSize: hp(2.5), fontWeight: "bold", marginTop: hp(2) }}
@@ -142,7 +145,9 @@ export default function home() {
                     Covid-19
                   </Text>
                   <Text style={{ fontSize: hp(2) }}>News & Information</Text>
-                  <Text style={{ fontSize: hp(2) }}>About Covid-19</Text>
+                  <Text style={{ fontSize: hp(2) }}>
+                    About Covid-19 Vaccine
+                  </Text>
                   <Text style={{ fontSize: hp(2), fontWeight: "bold" }}>
                     Please check this
                   </Text>
