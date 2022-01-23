@@ -12,6 +12,7 @@ import splashScreen from "../View/splash/splashScreen";
 import login from "../auth/login/index";
 import register from "../auth/register/index";
 import DetailCovid from "../DetailCovid";
+import DetailWashHand from "../View/DetailWashHand";
 
 const Tab = createMaterialBottomTabNavigator();
 const Stack = createStackNavigator();
@@ -90,6 +91,7 @@ const NavigationRoutes = () => {
         <Stack.Screen name="register" component={register} />
         <Stack.Screen name="login" component={login} />
         <Stack.Screen name="DetailCovid" component={DetailCovid} />
+        <Stack.Screen name="DetailWashHand" component={DetailWashHand} />
       </Stack.Navigator>
     </NavigationContainer>
   );
