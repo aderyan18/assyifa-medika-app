@@ -11,8 +11,8 @@ import obat from "../View/obat/index";
 import splashScreen from "../View/splash/splashScreen";
 import login from "../auth/login/index";
 import register from "../auth/register/index";
-import DetailCovid from "../DetailCovid";
 import DetailWashHand from "../View/DetailWashHand";
+import DetailCovid from "../View/DetailCovid";
 
 const Tab = createMaterialBottomTabNavigator();
 const Stack = createStackNavigator();

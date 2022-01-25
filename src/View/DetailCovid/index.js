@@ -6,7 +6,7 @@ import {
   widthPercentageToDP as wp,
 } from "react-native-responsive-screen";
 import Icon from "react-native-vector-icons/Ionicons";
-import { COLOR } from "../styles/color";
+import { COLOR } from "../../styles/color";
 import { useNavigation } from "@react-navigation/core";
 import { ScrollView, TouchableOpacity } from "react-native-gesture-handler";
 

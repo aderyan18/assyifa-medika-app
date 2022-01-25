@@ -42,7 +42,11 @@ export default function DaftarObat() {
           alignItems: "center",
         }}
       >
-        <Text style={{ fontSize: wp(5), fontWeight: "bold" }}>Daftar Obat</Text>
+        <Text
+          style={{ fontSize: wp(5), fontWeight: "bold", color: COLOR.TEXT }}
+        >
+          Daftar Obat
+        </Text>
       </View>
       <View
         style={{
@@ -69,7 +73,6 @@ export default function DaftarObat() {
                     // padding: wp(5),
                     flexDirection: "row",
                     marginBottom: hp(3),
-                    // alignItems: "center",
                   }}
                 >
                   <Image
@@ -86,15 +89,24 @@ export default function DaftarObat() {
                       width: wp(55),
                       height: hp(20),
                       backgroundColor: "#D1D5DB",
-                      padding: wp(1),
+                      padding: wp(5),
                     }}
                   >
                     <View>
-                      <Text style={{ fontSize: wp(4.5) }}>Obat Antalgin</Text>
+                      <Text style={{ fontSize: hp(2.5), color: COLOR.TEXT }}>
+                        Obat Antalgin
+                      </Text>
                     </View>
-                    <Text style={{ fontSize: wp(3.5) }}>Kimia Farma</Text>
-                    <View></View>
-                    <View
+                    <Text style={{ fontSize: hp(3), color: COLOR.TEXT }}>
+                      Kimia Farma
+                    </Text>
+                    <View style={{ flexDirection: "row", marginTop: hp(5) }}>
+                      <Text style={{ fontWeight: "bold", marginRight: wp(1) }}>
+                        Tersedia
+                      </Text>
+                      <Text>Rp.12.000</Text>
+                    </View>
+                    {/* <View
                       style={{
                         backgroundColor: "#D1D5DB",
                         width: wp(55),
@@ -165,7 +177,7 @@ export default function DaftarObat() {
                           color={"#000000"}
                         />
                       </TouchableOpacity>
-                    </View>
+                    </View> */}
                   </View>
                 </View>
               </View>
