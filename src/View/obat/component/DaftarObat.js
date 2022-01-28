@@ -37,20 +37,6 @@ export default function DaftarObat() {
       <View
         style={{
           width: wp(90),
-          height: hp(5),
-          alignSelf: "center",
-          alignItems: "center",
-        }}
-      >
-        <Text
-          style={{ fontSize: wp(5), fontWeight: "bold", color: COLOR.TEXT }}
-        >
-          Daftar Obat
-        </Text>
-      </View>
-      <View
-        style={{
-          width: wp(90),
           height: hp(70),
           backgroundColor: COLOR.SECONDARY,
           alignSelf: "center",

@@ -59,7 +59,7 @@ export default function DetailWashHand() {
                 <View style={{ flexDirection: "column" }}>
                   <Text style={{ fontWeight: "bold" }}>
                     Basahi tangan dengan air bersih, kemudian tuangkan Saniter
-                    Hand Wash pada telapak tangan
+                    Hand Wash pada telapak tangan.
                   </Text>
                 </View>
               </View>
@@ -81,7 +81,7 @@ export default function DetailWashHand() {
                 <View style={{ flexDirection: "column" }}>
                   <Text style={{ fontWeight: "bold" }}>
                     Tangkupkan kedua telapak tangan, kemudian gosokkan Saniter
-                    Hand Wash yang telah dituangkan secara merata
+                    Hand Wash yang telah dituangkan secara merata.
                   </Text>
                 </View>
               </View>
@@ -125,7 +125,7 @@ export default function DetailWashHand() {
                 <View style={{ flexDirection: "column" }}>
                   <Text style={{ fontWeight: "bold" }}>
                     Letakkan punggung jari pada telapak satunya dengan jari yang
-                    saling mengunci
+                    saling mengunci.
                   </Text>
                 </View>
               </View>
@@ -169,7 +169,7 @@ export default function DetailWashHand() {
                 <View style={{ flexDirection: "column" }}>
                   <Text style={{ fontWeight: "bold" }}>
                     Kuncupkan jari-jari tangan kanan Anda, kemudian gosok
-                    memutar di telapak tangan kiri dan lakukan sebaliknya
+                    memutar di telapak tangan kiri dan lakukan sebaliknya.
                   </Text>
                 </View>
               </View>
@@ -190,7 +190,7 @@ export default function DetailWashHand() {
                 <Text style={{ fontWeight: "bold" }}>7. </Text>
                 <View style={{ flexDirection: "column" }}>
                   <Text style={{ fontWeight: "bold" }}>
-                    Bilas dan keringkan menggunakan tisu atau kain bersih
+                    Bilas dan keringkan menggunakan tisu atau kain bersih.
                   </Text>
                 </View>
               </View>

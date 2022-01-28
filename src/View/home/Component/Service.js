@@ -29,6 +29,7 @@ export default function Service() {
           borderRadius: wp(5),
           marginRight: wp(4),
         }}
+        onPress={() => navigation.navigate("Consultation")}
       >
         <Image
           style={{ width: wp(20), height: hp(10) }}
@@ -36,7 +37,7 @@ export default function Service() {
             uri: "https://image.flaticon.com/icons/png/512/1147/1147962.png",
           }}
         />
-        <Text style={{ color: COLOR.TEXT }}>Consultation</Text>
+        <Text style={{ color: "#fff" }}>Consultation</Text>
       </TouchableOpacity>
       <TouchableOpacity
         style={{
@@ -55,7 +56,7 @@ export default function Service() {
             uri: "https://image.flaticon.com/icons/png/512/1145/1145807.png",
           }}
         />
-        <Text style={{ color: COLOR.TEXT }}>Pharmacist</Text>
+        <Text style={{ color: "#fff" }}>Pharmacist</Text>
       </TouchableOpacity>
       {/* <TouchableOpacity
         style={{

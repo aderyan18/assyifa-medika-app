@@ -45,6 +45,26 @@ export default function obat() {
       {/* SearchBar */}
       <View
         style={{
+          width: wp(100),
+          height: hp(5),
+          alignSelf: "center",
+          alignItems: "center",
+          backgroundColor: COLOR.SECONDARY,
+        }}
+      >
+        <Text
+          style={{
+            fontSize: wp(5),
+            fontWeight: "bold",
+            color: COLOR.TEXT,
+            marginTop: hp(1),
+          }}
+        >
+          Daftar Obat
+        </Text>
+      </View>
+      <View
+        style={{
           backgroundColor: COLOR.SECONDARY,
           width: wp(100),
         }}
