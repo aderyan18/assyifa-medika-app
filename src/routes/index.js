@@ -14,6 +14,7 @@ import register from "../auth/register/index";
 import DetailWashHand from "../View/DetailWashHand";
 import DetailCovid from "../View/DetailCovid";
 import Consultation from "../View/Consultation";
+import Pharmacist from "../View/Pharmacist";
 
 const Tab = createMaterialBottomTabNavigator();
 const Stack = createStackNavigator();
@@ -94,6 +95,7 @@ const NavigationRoutes = () => {
         <Stack.Screen name="DetailCovid" component={DetailCovid} />
         <Stack.Screen name="DetailWashHand" component={DetailWashHand} />
         <Stack.Screen name="Consultation" component={Consultation} />
+        <Stack.Screen name="Pharmacist" component={Pharmacist} />
       </Stack.Navigator>
     </NavigationContainer>
   );

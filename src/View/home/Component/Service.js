@@ -49,6 +49,7 @@ export default function Service() {
           borderRadius: wp(5),
           marginRight: wp(4),
         }}
+        onPress={() => navigation.navigate("Pharmacist")}
       >
         <Image
           style={{ width: wp(20), height: hp(10) }}
