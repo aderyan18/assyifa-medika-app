@@ -33,7 +33,7 @@ export default function Pharmacist() {
         <Text
           style={{
             marginTop: hp(5),
-            marginLeft: wp(15),
+            marginLeft: wp(19),
             fontWeight: "bold",
             fontSize: hp(2.5),
           }}
@@ -50,7 +50,42 @@ export default function Pharmacist() {
           borderTopLeftRadius: wp(10),
           bottom: hp(5),
         }}
-      ></View>
+      >
+        <View
+          style={{
+            backgroundColor: "#FFF",
+            width: wp(90),
+            height: hp(20),
+            alignSelf: "center",
+            marginTop: hp(5),
+            borderRadius: wp(5),
+          }}
+        >
+          <Text
+            style={{
+              textAlign: "center",
+              fontSize: hp(3),
+              fontStyle: "italic",
+              fontWeight: "bold",
+            }}
+          >
+            (Jam Masuk)
+          </Text>
+          <View
+            style={{
+              backgroundColor: COLOR.PRIMARY,
+              width: wp(80),
+              height: hp(15),
+              alignSelf: "center",
+              borderRadius: wp(4),
+            }}
+          >
+            <Text style={{ textAlign: "center", fontSize: hp(3) }}>
+              Senin - Minggu
+            </Text>
+          </View>
+        </View>
+      </View>
     </View>
   );
 }

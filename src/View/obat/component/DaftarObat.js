@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { View, Text, Image, TouchableOpacity } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { COLOR } from "../../../styles/color";
@@ -17,11 +17,26 @@ import {
   widthPercentageToDP as wp,
 } from "react-native-responsive-screen";
 
-export default function DaftarObat() {
-  const obat = [];
-  for (let a = 1; a < 7; a++) {
-    obat[a] = a + 1;
-  }
+export default function DaftarObat(search) {
+  const [obat, setObat] = useState(null);
+  const getObat = async () => {
+    await fetch(`https://apotik.warungta.my.id/api/obat`, {
+      headers: {
+        // Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+    })
+      .then((resp) => resp.json())
+      .then((resp) => {
+        console.log("resss", resp.data);
+        setObat(resp.data);
+        // var meta = JSON.stringify(resp.meta);
+        // meta = JSON.parse(meta);
+      });
+  };
+  useEffect(() => {
+    getObat();
+  }, []);
 
   const [jumlah, setJumlah] = useState(0);
 
@@ -43,13 +58,13 @@ export default function DaftarObat() {
         }}
       >
         <ScrollView>
-          {obat.map((item, index) => {
+          {obat?.map((index) => {
             return (
               <View
                 style={{
                   justifyContent: "space-between",
                 }}
-                key={index}
+                key={index.id}
               >
                 <View
                   style={{
@@ -62,10 +77,14 @@ export default function DaftarObat() {
                   }}
                 >
                   <Image
-                    source={require("../../Assets/Icon/antalgin.jpg")}
+                    source={{
+                      uri: `https://apotik.warungta.my.id/gambar/obat/${index.gambar}`,
+                    }}
                     style={{
                       height: hp(20),
                       width: wp(35),
+                      borderTopLeftRadius: wp(5),
+                      borderBottomLeftRadius: wp(5),
                     }}
                   />
                   <View
@@ -74,24 +93,69 @@ export default function DaftarObat() {
                       justifyContent: "flex-start",
                       width: wp(55),
                       height: hp(20),
-                      backgroundColor: "#D1D5DB",
+                      backgroundColor: COLOR.PRIMARY,
                       padding: wp(5),
+                      borderTopRightRadius: wp(5),
+                      borderBottomRightRadius: wp(5),
                     }}
                   >
-                    <View>
-                      <Text style={{ fontSize: hp(2.5), color: COLOR.TEXT }}>
-                        Obat Antalgin
+                    {/* header content start */}
+                    <View
+                      style={{
+                        width: wp(40),
+                        height: hp(4.5),
+                        backgroundColor: "#c0c0c0",
+                        alignItems: "center",
+                        borderRadius: wp(3),
+                      }}
+                    >
+                      <Text style={{ fontSize: hp(2.5), color: "#FFF" }}>
+                        Assyifa Medika
                       </Text>
                     </View>
-                    <Text style={{ fontSize: hp(3), color: COLOR.TEXT }}>
-                      Kimia Farma
+                    {/* header content end */}
+                    <Text
+                      style={{
+                        fontSize: hp(2.5),
+                        color: "#FFF",
+                        marginTop: hp(1),
+                      }}
+                    >
+                      {index.nama}
                     </Text>
-                    <View style={{ flexDirection: "row", marginTop: hp(5) }}>
-                      <Text style={{ fontWeight: "bold", marginRight: wp(1) }}>
-                        Tersedia
+                    {/* SATUAN START */}
+                    <View style={{ flexDirection: "row" }}>
+                      <Text style={{ fontSize: hp(2.5), color: "#FFF" }}>
+                        {index.stok}
                       </Text>
-                      <Text>Rp.12.000</Text>
+                      <Text
+                        style={{
+                          fontSize: hp(2.5),
+                          marginLeft: wp(2),
+                          color: "#FFF",
+                        }}
+                      >
+                        {index.satuan}
+                      </Text>
                     </View>
+                    {/* SATUAN END */}
+
+                    {/* HARGA START */}
+                    <View style={{ flexDirection: "row", marginTop: hp(2) }}>
+                      <Text
+                        style={{
+                          fontWeight: "bold",
+                          marginRight: wp(1),
+                          color: "#FFF",
+                        }}
+                      >
+                        Harga
+                      </Text>
+                      <Text style={{ color: "#FFF" }}>
+                        Rp. {index.harga.toLocaleString()}
+                      </Text>
+                    </View>
+                    {/* HARGA END */}
                     {/* <View
                       style={{
                         backgroundColor: "#D1D5DB",

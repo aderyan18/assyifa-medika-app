@@ -69,19 +69,47 @@ export default function obat() {
           width: wp(100),
         }}
       >
-        <Searchbar
-          placeholder="Search"
-          onChangeText={onChangeSearch}
-          value={searchQuery}
+        <View
           style={{
-            Color: COLOR.SECONDARY,
-            width: wp(90),
-            alignSelf: "center",
-            top: hp(1),
-            borderWidth: 1,
-            borderColor: COLOR.PRIMARY,
+            flexDirection: "row",
+            justifyContent: "center",
           }}
-        />
+        >
+          <Searchbar
+            placeholder="Search"
+            onChangeText={onChangeSearch}
+            value={searchQuery}
+            style={{
+              Color: COLOR.SECONDARY,
+              width: wp(70),
+              alignSelf: "center",
+              top: hp(1),
+              borderWidth: 1,
+              borderColor: COLOR.PRIMARY,
+            }}
+          />
+          <TouchableOpacity
+            style={{
+              width: wp(20),
+              height: hp(7),
+              backgroundColor: COLOR.PRIMARY,
+              marginTop: hp(2),
+              borderRadius: wp(3),
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <Image
+              style={{
+                width: wp(6),
+                height: hp(3),
+              }}
+              source={{
+                uri: "https://cdn-icons-png.flaticon.com/512/149/149852.png",
+              }}
+            />
+          </TouchableOpacity>
+        </View>
         <View>
           <DaftarObat />
         </View>
