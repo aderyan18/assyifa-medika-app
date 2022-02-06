@@ -25,9 +25,9 @@ export default function Information() {
     >
       <Swiper
         showButtons={true}
-        // loop={true}
-        // autoplay={true}
-        // autoplayTimeout={3}
+        loop={true}
+        autoplay={true}
+        autoplayTimeout={2}
       >
         {/* slide 1 */}
         <TouchableOpacity>
