@@ -51,6 +51,7 @@ export default function Pharmacist() {
           bottom: hp(5),
         }}
       >
+        {/* content jam buka start */}
         <View
           style={{
             backgroundColor: "#FFF",
@@ -69,7 +70,7 @@ export default function Pharmacist() {
               fontWeight: "bold",
             }}
           >
-            (Jam Masuk)
+            (Jam Buka)
           </Text>
           <View
             style={{
@@ -82,6 +83,59 @@ export default function Pharmacist() {
           >
             <Text style={{ textAlign: "center", fontSize: hp(3) }}>
               Senin - Minggu
+            </Text>
+            <Text
+              style={{
+                textAlign: "center",
+                marginTop: hp(2),
+                fontSize: hp(3.5),
+              }}
+            >
+              Pukul 07.00 WITA
+            </Text>
+          </View>
+        </View>
+        {/* content jam buka end */}
+        <View
+          style={{
+            backgroundColor: "#FFF",
+            width: wp(90),
+            height: hp(20),
+            alignSelf: "center",
+            marginTop: hp(5),
+            borderRadius: wp(5),
+          }}
+        >
+          <Text
+            style={{
+              textAlign: "center",
+              fontSize: hp(3),
+              fontStyle: "italic",
+              fontWeight: "bold",
+            }}
+          >
+            (Jam Tutup)
+          </Text>
+          <View
+            style={{
+              backgroundColor: COLOR.PRIMARY,
+              width: wp(80),
+              height: hp(15),
+              alignSelf: "center",
+              borderRadius: wp(4),
+            }}
+          >
+            <Text style={{ textAlign: "center", fontSize: hp(3) }}>
+              Senin - Minggu
+            </Text>
+            <Text
+              style={{
+                textAlign: "center",
+                marginTop: hp(2),
+                fontSize: hp(3.5),
+              }}
+            >
+              Pukul 00.00 WITA
             </Text>
           </View>
         </View>
