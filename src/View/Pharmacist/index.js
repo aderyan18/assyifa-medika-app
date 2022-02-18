@@ -28,7 +28,7 @@ export default function Pharmacist() {
           onPress={() => navigation.goBack()}
           style={{ marginTop: hp(5) }}
         >
-          <Icon name="arrow-back" size={hp(4)} color={"black"} />
+          <Icon name="arrow-back" size={hp(4)} color={COLOR.TEXT} />
         </TouchableOpacity>
         <Text
           style={{
@@ -36,6 +36,7 @@ export default function Pharmacist() {
             marginLeft: wp(19),
             fontWeight: "bold",
             fontSize: hp(2.5),
+            color: COLOR.TEXT,
           }}
         >
           Jam Operasional

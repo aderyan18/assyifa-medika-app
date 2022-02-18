@@ -78,6 +78,7 @@ export default function obat() {
                 fontWeight: "bold",
                 fontSize: hp(3),
                 marginBottom: hp(1),
+                color: COLOR.TEXT,
               }}
             >
               Lokasi
