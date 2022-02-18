@@ -222,7 +222,7 @@ export default function obat() {
                           borderBottomLeftRadius: wp(5),
                         }}
                       />
-                      <View
+                      <TouchableOpacity
                         style={{
                           alignItems: "flex-start",
                           justifyContent: "flex-start",
@@ -293,7 +293,7 @@ export default function obat() {
                           </Text>
                         </View>
                         {/* HARGA END */}
-                      </View>
+                      </TouchableOpacity>
                     </View>
                   </View>
                 );

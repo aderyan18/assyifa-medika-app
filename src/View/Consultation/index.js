@@ -69,7 +69,7 @@ export default function Consultation() {
             Mengapa Obat Harus di Konsultasikan ?
           </Text>
         </View>
-        <View
+        <TouchableOpacity
           style={{
             backgroundColor: COLOR.PRIMARY,
             width: wp(80),
@@ -81,8 +81,8 @@ export default function Consultation() {
           }}
         >
           <Text> 1. Obat memiliki berbagai macam dosis</Text>
-        </View>
-        <View
+        </TouchableOpacity>
+        <TouchableOpacity
           style={{
             backgroundColor: COLOR.PRIMARY,
             width: wp(80),
@@ -94,8 +94,8 @@ export default function Consultation() {
           }}
         >
           <Text> 2. Obat memiliki efek samping</Text>
-        </View>
-        <View
+        </TouchableOpacity>
+        <TouchableOpacity
           style={{
             backgroundColor: COLOR.PRIMARY,
             width: wp(80),
@@ -107,8 +107,8 @@ export default function Consultation() {
           }}
         >
           <Text> 3. Obat memiliki berbagai macam interaksi</Text>
-        </View>
-        <View
+        </TouchableOpacity>
+        <TouchableOpacity
           style={{
             backgroundColor: COLOR.PRIMARY,
             width: wp(80),
@@ -120,8 +120,8 @@ export default function Consultation() {
           }}
         >
           <Text> 4. Obat memiliki cara pakai yang berbeda</Text>
-        </View>
-        <View
+        </TouchableOpacity>
+        <TouchableOpacity
           style={{
             backgroundColor: COLOR.PRIMARY,
             width: wp(80),
@@ -133,7 +133,7 @@ export default function Consultation() {
           }}
         >
           <Text> 5. Obat bisa diganti dengan yang lebih murah</Text>
-        </View>
+        </TouchableOpacity>
       </View>
     </View>
   );
